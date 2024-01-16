@@ -30,7 +30,6 @@ nav h2{
     flex-direction: column;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-
 }
 #Square{
     margin-top: 10px;
@@ -44,21 +43,26 @@ body{
     background-color: #BFCFE7;
 }
 #Square :focus{
-        border: #365486;
+    border: solid #365486;
 }
 button {
+    flex-direction: row-reverse;
     background-color: #365486;
     color: white;
     border: none;
     border-radius: 8px;
     padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    flex: auto;
+    flex-direction: column-reverse;
 
 }
 button:hover {
-    background-color: #365486;
+    background-color: #FFBB64;
 }
 button:active{
-    background-color: #365486;
+    background-color: #65B741;
     transform: translateY(5px);
 }
 
