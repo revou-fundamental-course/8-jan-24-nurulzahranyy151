@@ -5,22 +5,28 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <script src="js/script.js"></script>
+
         <header>
-        <h1>Katik Kalkulator Matematik</h1>
-        <h2>Welcome To Katik!</h2>
-        <p>Hai Sobat, Selamat Datang di Katik! :) <br>
-        Sebuah Web Apps sederhana yang berfungsi untuk mengitung nilai luas dan keliling bangun datar</p>
+            <h1>Katik Kalkulator Matematik</h1>
         </header>
+        
+
+        <nav>
+        <img src="img/persegi.jpg" alt="Gambar Persegi" width="200" height="200">
+            <h2>Welcome To Katik!</h2>
+            <p>Hai Sobat, Selamat Datang di Katik!<br>
+            Sebuah web apps sederhana yang berfungsi untuk mengitung nilai luas dan keliling bangun datar</p>
+        </nav>
 
         <div class="input">
             <label for="Square" id="labelSquare">Hitung Luas Persegi</label>
-            <input type="number" id="Square">
+            <input type="number" value="Ketik Disini" id="Square" oninput="luas(), kel()">
         </div>
+
         <div class="buttons">
-            <button id="countBotton">Hitung</button>
+            <button id="countButton" onclick="tampilkanOutput()">Hitung</button>
             <button id="resetButton">Reset</button>
         </div>
-
-
     </body>
 </html>
