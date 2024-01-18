@@ -87,7 +87,6 @@ button:hover {
     background-color: #FFBB64;
 }
 button:disabled{
-
         background-color: red;
         cursor: not-allowed;
     
@@ -97,3 +96,7 @@ button:active{
     transform: translateY(10px);
 }
 
+footer{
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+}
