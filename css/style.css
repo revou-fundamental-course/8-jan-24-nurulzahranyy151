@@ -1,20 +1,21 @@
 header h1{
     background-color: #365486;
     color: white;
-    text-align: center;
     padding: 10px 10px 10px;
-    margin-top: 0px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
 }
-header h2{
-text-align: center;
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-p{
+
+nav p{
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
 nav img{
+    padding-top: 30px;
     display: block;
     margin: 0 auto;
 }
@@ -24,13 +25,32 @@ nav h2{
     text-align: center;
 }
 
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
 
-.input{
+.inputNumber{
     display: flex;
     flex-direction: column;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.result {
+    margin-top: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.result p {
+    margin: 5px 0;
+}
+
+#luas, #kel {
+    font-weight: bold;
+}
+
+
 #Square{
     margin-top: 10px;
     outline: none;
@@ -41,12 +61,16 @@ nav h2{
 }
 body{
     background-color: #BFCFE7;
+    text-align: center;
+    margin-top: 20px;
 }
+
+
 #Square :focus{
     border: solid #365486;
 }
+
 button {
-    flex-direction: row-reverse;
     background-color: #365486;
     color: white;
     border: none;
@@ -54,15 +78,19 @@ button {
     padding: 10px 20px;
     margin-top: 10px;
     cursor: pointer;
-    flex: auto;
-    flex-direction: column-reverse;
+    display: flex;
+    justify-content: flex-start;
 
 }
+
 button:hover {
     background-color: #FFBB64;
 }
+button:disabled{
+    background-color: red;
+}
 button:active{
     background-color: #65B741;
-    transform: translateY(5px);
+    transform: translateY(10px);
 }
 

@@ -1,25 +1,64 @@
-let input=1234567890;
-try {
-    let user= INPUT.parse(input);
-} catch (err){
-    console.log("error name: ", err.name);
-    console.log("error message:", err.message);
+const inputSection=document.getElementById('Square')
+const countButton=document.getElementById('countBotton')
+
+function validateInput(input){
+    const integerRegex=/^-?\d+$/;
+    return integerRegex.test(input);
+}
+
+inputSection.addEventListener('input', function (){
+    const inputValue = inputSection.value.trim()
+    if(validateInput(inputValue)){
+        countButton.disabled=false;
+    } else {
+        countButton.disabled=true;
+        alert("Not Digits")
+    }
+})
+
+function reset() {
+    document.getElementById('Square').value = '';
+    countButton.disabled = true;
+    resetResults();
+}
+
+var catchDisplay=""
+
+function resetResults() {
+    document.getElementById('luas').value = '';  
+    document.getElementById('kel').value = '';  
 }
 
 
-function luas(){
+function hitung(){
+        luas();
+        kel();
+}
+
+function luas() {
     var sisi = document.getElementById('Square').value;
     var luas = sisi * sisi;
     document.getElementById('luas').innerHTML = luas;
-    console.log(luas);
+    console.log("Luas:", luas)
+    if (document.getElementById('countButton').disabled === false) {
+        document.getElementById('luas').innerHTML = luas;
+        console.log("Luas:", luas);
+    }
 }
-function kel(){
+
+function kel() {
     var sisi = document.getElementById('Square').value;
     var kel = 4*sisi;
     document.getElementById('kel').innerHTML = kel;
-    console.log(kel);
+    console.log("Keliling:", kel)
+    if (document.getElementById('countButton').disabled === false) {
+        document.getElementById('kel').innerHTML = kel;
+        console.log("Keliling:", kel);
+    }
 }
 
-function tampilkanOutput(){
-    
-}
+
+
+
+
+
