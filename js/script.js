@@ -1,20 +1,19 @@
-const inputSection=document.getElementById('Square')
-const countButton=document.getElementById('countBotton')
+const inputSection = document.getElementById('Square');
+const countButton = document.getElementById('countButton');
 
-function validateInput(input){
-    const integerRegex=/^-?\d+$/;
+function validateInput(input) {
+    const integerRegex = /^-?\d+$/;
     return integerRegex.test(input);
 }
 
-inputSection.addEventListener('input', function (){
-    const inputValue = inputSection.value.trim()
-    if(validateInput(inputValue)){
-        countButton.disabled=false;
+inputSection.addEventListener('input', function () {
+    const inputValue = inputSection.value.trim();
+    if (validateInput(inputValue)) {
+        countButton.disabled = false;
     } else {
-        countButton.disabled=true;
-        alert("Not Digits")
+        countButton.disabled = true;
     }
-})
+});
 
 function reset() {
     document.getElementById('Square').value = '';
